@@ -22,14 +22,14 @@ Tlačítko ZAČÍT HRÁT  #0197f6. Po najetí  #0090e9
 */
 
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   background-repeat: no-repeat;
   height: 100vh;
-  margin: 0;
 }
 
-/*Main card */
+/* Main card */
 .main-card {
   margin: 0 auto;
   margin-top: 5rem;
@@ -44,6 +44,12 @@ body {
   .main-card {
     width: 362px;
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* Picture*/
@@ -64,7 +70,7 @@ body {
 
 /* Description */
 .main-card__info {
-  padding: 1.25rem 0.625rem;
+  padding: 0 0.625rem;
 }
 
 .main-card__heading {
