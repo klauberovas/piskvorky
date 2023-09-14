@@ -9,6 +9,18 @@ html {
   box-sizing: inherit;
 }
 
+/* 
+STYLY
+-------------------------------------------------
+Nadpis Piškvorky je fontem Lobster
+Gradient z fialové  #615dad do růžové  #ffc8da;
+Barva textu  #ffffff.
+Podkladová tmavě modrá  #283e50.
+Tlačítko PRAVIDLA  #1fcca4. A po najetí myši  #1cbb96.
+Tlačítko ZAČÍT HRÁT  #0197f6. Po najetí  #0090e9
+--------------------------------------------------
+*/
+
 body {
   font-family: Arial, sans-serif;
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
@@ -17,32 +29,42 @@ body {
   margin: 0;
 }
 
+/*Main card */
 .main-card {
   margin: 0 auto;
   text-align: center;
   max-width: 362px;
   color: #ffffff;
-  padding-top: 10%;
+  padding-top: 5rem;
+  line-height: 1.5;
+}
+
+/* Picture */
+/* Zamezení mezery flexboxem a zajištěním object fit cover */
+.main-card__picture {
+  display: flex;
 }
 
 .main-card__picture img {
-  max-width: 100%;
-  height: 224px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
 }
 
-
+/* Description */
 .main-card__info {
   background-color: #283e50;
   padding: 1.25rem 0.625rem;
 }
 
 .main-card__heading {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster';
+  font-size: 3rem;
   margin: 0;
 }
 
+/* Button */
 .main-card__button {
   display: block;
   color: #ffffff;
@@ -54,12 +76,13 @@ body {
   background-color: #1fcca4;
 }
 
-.main-card__button--green:hover {
-  background-color: #1cbb96;
-}
-
 .main-card__button--blue {
   background-color: #0197f6;
+}
+
+/* Button hover */
+.main-card__button--green:hover {
+  background-color: #1cbb96;
 }
 
 .main-card__button--blue:hover {
