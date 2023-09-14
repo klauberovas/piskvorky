@@ -1,0 +1,67 @@
+/* Základní styly */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-card {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 362px;
+  color: #ffffff;
+  padding-top: 10%;
+}
+
+.main-card__picture img {
+  max-width: 100%;
+  height: 224px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+
+.main-card__info {
+  background-color: #283e50;
+  padding: 1.25rem 0.625rem;
+}
+
+.main-card__heading {
+  font-family: 'Lobster', cursive;
+  margin: 0;
+}
+
+.main-card__button {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+
+.main-card__button--green {
+  background-color: #1fcca4;
+}
+
+.main-card__button--green:hover {
+  background-color: #1cbb96;
+}
+
+.main-card__button--blue {
+  background-color: #0197f6;
+}
+
+.main-card__button--blue:hover {
+  background-color: #0090e9;
+}
