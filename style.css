@@ -30,25 +30,11 @@ body {
 }
 
 /*-----------------Společné styly----------------*/
-main {
+.main {
   margin: 0 auto;
   color: #ffffff;
   text-align: center;
-  margin-top: 5rem;
-}
-
-.container {
-  display: flex;
-}
-
-.container--column {
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.container--grow {
-  flex: 0 1 calc(100 / 10);
-
+  margin-top: 2rem;
 }
 
 .main__title {
@@ -61,6 +47,21 @@ main {
   margin-bottom: 1rem;
 }
 
+/*------CONTAINER FLEXBOX-----*/
+.container {
+  display: flex;
+}
+
+.container--column {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container--space-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*------BUTTON ------*/
 .button--green {
   background-color: #1fcca4;
@@ -70,7 +71,7 @@ main {
   background-color: #0197f6;
 }
 
-/* Button hover */
+/*----- BUTTON HOVER-------*/
 .button--green:hover {
   background-color: #1cbb96;
 }
@@ -79,7 +80,7 @@ main {
   background-color: #0090e9;
 }
 
-/* Main card */
+/*--------------------- MAIN CARD------------------ */
 .main-card {
   max-width: 70%;
   line-height: 1.4;
@@ -92,50 +93,42 @@ main {
   }
 }
 
-
-
-/* Picture*/
-/* Zamezení mezery mezi obr a popiskem flexboxem */
-.main-card__picture {
-  display: flex;
-}
+/*-------MAIN CARD Picture--------*/
 
 .main-card__picture img {
   width: 100%;
 }
 
-/* Společný border, aby se nepřekrývali */
+/*------Společný border, aby se nepřekrývali------- */
 .main-card,
 .main-card__picture img {
   border-radius: 6px 6px 0 0;
 }
 
-/* Description */
+/*------ MAIN CARD Description-------*/
 .main-card__info {
   padding: 0 1.5rem;
 }
 
-/* Button */
-.main-card__buttons {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 0.1rem;
-}
+/*------ MAIN CARD Button------*/
 
 .main-card__button {
+  display: block;
   color: #ffffff;
   text-decoration: none;
+  margin-top: 0.1rem;
   padding: 1rem 0;
 }
 
 
-/*----------------------STYLY HRA.HTML-----------------------------*/
+/*----------------------GAME CARD -----------------------------*/
 .game-card {
   max-width: 80vmin;
 }
 
-.container--space-between {
-  justify-content: space-between;
+/*------GAME CARD NAV----*/
+.game-card__nav {
+  margin-bottom: 1rem;
 }
 
 .game-card__player {
@@ -144,6 +137,7 @@ main {
   position: relative;
 }
 
+/*----- GAME CARD CIRCLE-----*/
 .game-card__player::after {
   content: "";
   position: absolute;
@@ -154,20 +148,18 @@ main {
   border-radius: 50%;
 }
 
+/*------GAME CARD ICONS ------*/
 .game-card__button {
   display: inline-block;
   padding: 0.5rem;
   border-radius: 5px;
 }
 
-.game-card__field {
-  margin-bottom: 2rem;
-}
-
+/*----- GAME CARD BOX  -----*/
 .game-card__box {
   border: 1.5px solid #000000;
   opacity: 0.5;
-  margin: 0;
+  padding: 0;
   width: calc(80vmin / 10);
   height: calc(80vmin / 10)
 }
