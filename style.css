@@ -131,13 +131,13 @@ main {
   justify-content: space-between;
 }
 
-.game__player {
+.game-card__player {
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
 }
 
-.game__player::after {
+.game-card__player::after {
   content: "";
   position: absolute;
   left: 4rem;
@@ -147,7 +147,7 @@ main {
   border-radius: 50%;
 }
 
-.game__button {
+.game-card__button {
   display: inline-block;
   padding: 0.5rem;
   border-radius: 5px;
