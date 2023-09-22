@@ -41,6 +41,16 @@ main {
   display: flex;
 }
 
+.container--column {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container--grow {
+  flex: 0 1 calc(100 / 10);
+
+}
+
 .main__title {
   font-family: 'Lobster';
   font-size: 3rem;
@@ -82,10 +92,7 @@ main {
   }
 }
 
-.container--column {
-  flex-direction: column;
-  gap: 1rem;
-}
+
 
 /* Picture*/
 /* Zamezení mezery mezi obr a popiskem flexboxem */
@@ -151,4 +158,21 @@ main {
   display: inline-block;
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+.game-card__field {
+  margin-bottom: 2rem;
+}
+
+.game-card__box {
+  border: 1.5px solid #000000;
+  opacity: 0.5;
+  margin: 0;
+  width: calc(80vmin / 10);
+  height: calc(80vmin / 10)
+}
+
+.game-card__box:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
