@@ -156,9 +156,13 @@ body {
 }
 
 /*----- GAME CARD BOX  -----*/
+.game-card__field {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .game-card__box {
   border: 1.5px solid #000000;
-  opacity: 0.5;
+  opacity: 0.4;
   padding: 0;
   width: calc(80vmin / 10);
   height: calc(80vmin / 10)
@@ -166,5 +170,5 @@ body {
 
 .game-card__box:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.6;
 }
