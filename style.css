@@ -30,20 +30,20 @@ body {
 }
 
 /*-----------------Společné styly----------------*/
-.main {
+main {
   margin: 0 auto;
   color: #ffffff;
   text-align: center;
   margin-top: 2rem;
 }
 
-.main__title {
+.title {
   font-family: 'Lobster';
   font-size: 3rem;
   margin: 0;
 }
 
-.main__title--margin {
+.title--margin {
   margin-bottom: 1rem;
 }
 
