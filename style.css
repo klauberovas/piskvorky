@@ -150,15 +150,6 @@ main {
   margin: 0;
 }
 
-/* .game-card__player::after {
-  content: "";
-  position: absolute;
-  left: 4rem;
-  width: 1em;
-  height: 1em;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-} */
 
 /*------GAME CARD ICONS ------*/
 .game-card__button {
