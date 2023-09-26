@@ -137,8 +137,20 @@ main {
   position: relative;
 }
 
-/*----- GAME CARD CIRCLE-----*/
-.game-card__player::after {
+/*----- GAME CARD status-----*/
+.game-card__status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.game-card__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* .game-card__player::after {
   content: "";
   position: absolute;
   left: 4rem;
@@ -146,7 +158,7 @@ main {
   height: 1em;
   border: 2px solid #ffffff;
   border-radius: 50%;
-}
+} */
 
 /*------GAME CARD ICONS ------*/
 .game-card__button {
@@ -168,7 +180,8 @@ main {
   height: calc(80vmin / 10)
 }
 
-.game-card__box:hover {
+.game-card__box:hover,
+.game-card__box:focus {
   cursor: pointer;
   opacity: 0.6;
 }
