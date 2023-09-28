@@ -26,7 +26,7 @@ body {
   font-family: Arial, sans-serif;
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /*-----------------Společné styly----------------*/
@@ -164,8 +164,8 @@ main {
 }
 
 .game-card__box {
-  border: 1.5px solid #000000;
-  opacity: 0.4;
+  border: 1px solid #000000;
+  background: rgba(255, 255, 255, 0.4);
   padding: 0;
   width: calc(80vmin / 10);
   height: calc(80vmin / 10)
@@ -174,5 +174,5 @@ main {
 .game-card__box:hover,
 .game-card__box:focus {
   cursor: pointer;
-  opacity: 0.6;
+  background: rgba(255, 255, 255, 0.6)
 }
