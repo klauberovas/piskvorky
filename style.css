@@ -34,17 +34,13 @@ main {
   margin: 0 auto;
   color: #ffffff;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.4rem;
 }
 
 .title {
   font-family: 'Lobster';
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin: 0;
-}
-
-.title--margin {
-  margin-bottom: 1rem;
 }
 
 /*------CONTAINER FLEXBOX-----*/
