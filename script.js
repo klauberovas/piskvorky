@@ -51,3 +51,11 @@ document
 document
   .querySelector('button:nth-child(10)')
   .addEventListener('click', addCircleOrCross);
+
+document.getElementById('button-blue').addEventListener('click', (event) => {
+  const answer = confirm('Opravdu chceš začít znovu?');
+  if (answer === false) {
+    event.preventDefault();
+  }
+  return;
+});
