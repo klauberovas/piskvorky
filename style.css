@@ -132,9 +132,7 @@ main {
 }
 
 .game-card__player {
-  text-transform: uppercase;
-  font-weight: bold;
-  position: relative;
+  filter: brightness(0) invert(1);
 }
 
 /*----- GAME CARD status-----*/
@@ -174,5 +172,28 @@ main {
 .game-card__box:hover,
 .game-card__box:focus {
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.6)
+  opacity: 0.6;
+}
+
+/*---------Přidání circle a cross---------*/
+.game-card__box--circle {
+  background-image: url("images/circle.svg");
+}
+
+.game-card__box--cross {
+  background-image: url("images/cross.svg");
+}
+
+.game-card__box--circle,
+.game-card__box--cross {
+  background-repeat: no-repeat;
+  background-size: 6vmin;
+  background-position: center;
+}
+
+.game-card__box--circle:hover,
+.game-card__box--circle:focus,
+.game-card__box--cross:hover,
+.game-card__box--cross:focus {
+  opacity: 1;
 }
