@@ -176,6 +176,28 @@ main {
 }
 
 /*---------Přidání circle a cross---------*/
+@keyframes animatedBackground {
+  0% {
+    background-size: 0%;
+  }
+
+  25% {
+    background-size: 25%;
+  }
+
+  50% {
+    background-size: 50%;
+  }
+
+  75% {
+    background-size: 75%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
+
 .game-card__box--circle {
   background-image: url("images/circle.svg");
 }
@@ -189,6 +211,7 @@ main {
   background-repeat: no-repeat;
   background-size: 6vmin;
   background-position: center;
+  animation: animatedBackground 0.30s;
 }
 
 .game-card__box--circle:hover,
