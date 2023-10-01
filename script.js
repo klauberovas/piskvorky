@@ -2,20 +2,37 @@ console.log('funguju');
 let currentPlayer = 'cross';
 const playerElm = document.querySelector('.game-card__player');
 
-const addCircleOrCross = (event) => {
-  event.target.disabled = true;
+// const addCircleOrCross = (event) => {
+//   event.target.disabled = true;
+
+//   if (currentPlayer === 'cross') {
+//     return (
+//       (currentPlayer = 'circle'),
+//       (playerElm.src = 'images/cross.svg'),
+//       event.target.classList.add('game-card__box--circle')
+//     );
+//   }
+//   return (
+//     (currentPlayer = 'cross'),
+//     (playerElm.src = 'images/circle.svg'),
+//     event.target.classList.add('game-card__box--cross')
+//   );
+// };
+
+const addCircleOrCross = (e) => {
+  e.target.disabled = true;
 
   if (currentPlayer === 'cross') {
     return (
+      (playerElm.src = `images/${currentPlayer}.svg`),
       (currentPlayer = 'circle'),
-      (playerElm.src = 'images/cross.svg'),
-      event.target.classList.add('game-card__box--circle')
+      e.target.classList.add('game-card__box--circle')
     );
   }
   return (
+    (playerElm.src = `images/${currentPlayer}.svg`),
     (currentPlayer = 'cross'),
-    (playerElm.src = 'images/circle.svg'),
-    event.target.classList.add('game-card__box--cross')
+    e.target.classList.add('game-card__box--cross')
   );
 };
 
