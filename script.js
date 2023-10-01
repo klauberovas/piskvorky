@@ -1,19 +1,21 @@
 console.log('funguju');
-let currentPlayer = 'circle';
+let currentPlayer = 'cross';
 const playerElm = document.querySelector('.game-card__player');
 
 // currentPlayer.src = 'images/cross.svg';
 
 const addCircleOrCross = (event) => {
-  if (currentPlayer === 'circle') {
+  if (currentPlayer === 'cross') {
     return (
-      (currentPlayer = 'cross'),
-      event.target.classList.add('game-card__box--cross')
+      (currentPlayer = 'circle'),
+      (playerElm.src = 'images/cross.svg'),
+      event.target.classList.add('game-card__box--circle')
     );
   }
   return (
-    (currentPlayer = 'circle'),
-    event.target.classList.add('game-card__box--circle')
+    (currentPlayer = 'cross'),
+    (playerElm.src = 'images/circle.svg'),
+    event.target.classList.add('game-card__box--cross')
   );
 };
 
