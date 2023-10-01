@@ -5,6 +5,8 @@ const playerElm = document.querySelector('.game-card__player');
 // currentPlayer.src = 'images/cross.svg';
 
 const addCircleOrCross = (event) => {
+  event.target.disabled = true;
+
   if (currentPlayer === 'cross') {
     return (
       (currentPlayer = 'circle'),
