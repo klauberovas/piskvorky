@@ -58,6 +58,10 @@ main {
   align-items: center;
 }
 
+.container--wrap {
+  flex-wrap: wrap;
+}
+
 /*------BUTTON ------*/
 .button--green {
   background-color: #1fcca4;
@@ -161,8 +165,8 @@ main {
   border: 1px solid #000000;
   background: rgba(255, 255, 255, 0.4);
   padding: 0;
-  width: calc(80vmin / 10);
-  height: calc(80vmin / 10)
+  width: 8vmin;
+  height: 8vmin;
 }
 
 .game-card__box:hover,
