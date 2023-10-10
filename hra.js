@@ -29,32 +29,32 @@ const addCircleOrCross = (e) => {
   });
 
   //Alert na vyhlášení vítěze
-  const vitez = findWinner(gameField);
-  if (vitez === 'o') {
+  const winner = findWinner(gameField);
+  const alertAndRefresh = (message) => {
     setTimeout(() => {
-      alert(`Vyhrálo kolečko 🥳!`);
+      alert(message);
+      window.location.reload();
     }, 1000);
+  };
+  if (winner === 'o') {
+    alertAndRefresh('Vyhrálo kolečko 🥳!');
   }
-  if (vitez === 'x') {
-    setTimeout(() => {
-      alert('Vyhrál křížek 🥳!');
-    }, 1000);
+  if (winner === 'x') {
+    alertAndRefresh('Vyhrál křížek 🥳!');
   }
-  if (vitez === 'tie') {
-    setTimeout(() => {
-      alert('Hra skončila nerozhodně😒!');
-    }, 1000);
+  if (winner === 'tie') {
+    alertAndRefresh('Hra skončila nerozhodně😒!');
   }
 };
-//Posluchač na tlačítka při hře
+
+//Posluchač na tlačítka
 buttonsElm.forEach((button) => {
   button.addEventListener('click', addCircleOrCross);
 });
 
-//alert při přerušení hry
+//Alert při přerušení hry
 document.getElementById('button-blue').addEventListener('click', (event) => {
-  const answer = confirm('Opravdu chceš začít znovu?');
-  if (answer === false) {
+  if (confirm('Opravdu chceš začít znovu?')) {
     event.preventDefault();
   }
   return;
