@@ -4,10 +4,10 @@ let currentPlayer = 'cross';
 const playerElm = document.querySelector('.game-card__player');
 const buttonsElm = document.querySelectorAll('button');
 
-// fce přidávající x nebo o
+//fce obsahující přidání x/o, vytvoření pole, alert
 const addCircleOrCross = (e) => {
   e.target.disabled = true;
-
+  //Podmínka přidávající x nebo o
   if (currentPlayer === 'cross') {
     (playerElm.src = `images/${currentPlayer}.svg`),
       (currentPlayer = 'circle'),
@@ -27,15 +27,25 @@ const addCircleOrCross = (e) => {
     }
     return '_';
   });
+
   //Alert na vyhlášení vítěze
   const vitez = findWinner(gameField);
   if (vitez === 'o') {
-    alert(`Vyhrálo kolečko 🥳!`);
-  } else if (vitez === 'x') {
-    alert(`Vyhrál křížek 🥳!`);
+    setTimeout(() => {
+      alert(`Vyhrálo kolečko 🥳!`);
+    }, 1000);
+  }
+  if (vitez === 'x') {
+    setTimeout(() => {
+      alert('Vyhrál křížek 🥳!');
+    }, 1000);
+  }
+  if (vitez === 'tie') {
+    setTimeout(() => {
+      alert('Hra skončila nerozhodně😒!');
+    }, 1000);
   }
 };
-
 //Posluchač na tlačítka při hře
 buttonsElm.forEach((button) => {
   button.addEventListener('click', addCircleOrCross);
