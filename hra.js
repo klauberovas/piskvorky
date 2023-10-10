@@ -34,7 +34,7 @@ const addCircleOrCross = (e) => {
     setTimeout(() => {
       alert(message);
       window.location.reload();
-    }, 1000);
+    }, 500);
   };
   if (winner === 'o') {
     alertAndRefresh('Vyhrálo kolečko 🥳!');
