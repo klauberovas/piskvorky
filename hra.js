@@ -1,4 +1,5 @@
-console.log('funguju');
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
 let currentPlayer = 'cross';
 const playerElm = document.querySelector('.game-card__player');
 
@@ -36,36 +37,10 @@ const addCircleOrCross = (e) => {
   );
 };
 
-document
-  .querySelector('button:nth-child(1)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(2)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(3)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(4)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(5)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(6)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(7)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(8)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(9)')
-  .addEventListener('click', addCircleOrCross);
-document
-  .querySelector('button:nth-child(10)')
-  .addEventListener('click', addCircleOrCross);
+const buttonsElm = document.querySelectorAll('button');
+buttonsElm.forEach((button) => {
+  button.addEventListener('click', addCircleOrCross);
+});
 
 document.getElementById('button-blue').addEventListener('click', (event) => {
   const answer = confirm('Opravdu chceš začít znovu?');
