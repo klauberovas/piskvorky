@@ -57,5 +57,5 @@ document.getElementById('button-blue').addEventListener('click', (event) => {
   if (confirm('Opravdu chceš začít znovu?')) {
     return;
   }
-  event.preventDefault();
+  return event.preventDefault();
 });
