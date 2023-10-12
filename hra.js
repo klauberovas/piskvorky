@@ -55,7 +55,7 @@ buttonsElm.forEach((button) => {
 //Alert při přerušení hry
 document.getElementById('button-blue').addEventListener('click', (event) => {
   if (confirm('Opravdu chceš začít znovu?')) {
-    event.preventDefault();
+    return;
   }
-  return;
+  event.preventDefault();
 });
