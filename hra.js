@@ -1,20 +1,21 @@
 import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
-let currentPlayer = 'cross';
+let currentPlayer = 'circle';
 const playerElm = document.querySelector('.game-card__player');
 const buttonsElm = document.querySelectorAll('button');
 
 //fce obsahující přidání x/o, vytvoření pole, alert
-const addCircleOrCross = (e) => {
+const addCircleOrCross = async (e) => {
   e.target.disabled = true;
-  //Podmínka přidávající x nebo o
-  if (currentPlayer === 'cross') {
-    (playerElm.src = `images/${currentPlayer}.svg`),
-      (currentPlayer = 'circle'),
-      e.target.classList.add('game-card__box--circle');
-  } else if (currentPlayer === 'circle') {
-    (playerElm.src = `images/${currentPlayer}.svg`),
+  //Přidání 'o'
+  if (currentPlayer === 'circle') {
+    (playerElm.src = `images/cross.svg`),
       (currentPlayer = 'cross'),
+      e.target.classList.add('game-card__box--circle');
+  } else {
+    //Přidání 'x'
+    (playerElm.src = `images/circle.svg`),
+      (currentPlayer = 'circle'),
       e.target.classList.add('game-card__box--cross');
   }
   //vytvoření nového pole po každém tahu
@@ -38,12 +39,26 @@ const addCircleOrCross = (e) => {
   };
   if (winner === 'o') {
     alertAndRefresh('Vyhrálo kolečko 🥳!');
-  }
-  if (winner === 'x') {
+  } else if (winner === 'x') {
     alertAndRefresh('Vyhrál křížek 🥳!');
-  }
-  if (winner === 'tie') {
+  } else if (winner === 'tie') {
     alertAndRefresh('Hra skončila nerozhodně😒!');
+  } else if (currentPlayer === 'cross') {
+    //napojení API hrající za X
+    const response = await fetch(
+      'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+      {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({ board: gameField, player: 'x' }),
+      },
+    );
+    const data = await response.json();
+    const { x, y } = data.position;
+    const field = buttonsElm[x + y * 10];
+    field.click();
   }
 };
 
